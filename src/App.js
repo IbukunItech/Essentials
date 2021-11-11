@@ -1,9 +1,9 @@
 import React from "react";
-
+import Routes from "./Authethication/routes/route";
 const App = () => {
   return (
     <div>
-      <h1>Hello Essentials</h1>
+      <Routes />
     </div>
   );
 };
