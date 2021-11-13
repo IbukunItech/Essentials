@@ -85,6 +85,7 @@ const InputHolder = styled.div`
 `;
 
 const Input = styled.input`
+<<<<<<< HEAD
   width: 220px;
   height: 40px;
   margin-bottom: 10px;
@@ -95,6 +96,15 @@ const Input = styled.input`
   top: 0px;
   font-size: 16px;
   position: absolute;
+=======
+  width: 250px;
+  height: 30px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  outline: none;
+  padding: 0 5px;
+  border: 1px solid lightgray;
+>>>>>>> e0c72d534c301ecede8fb3cb628b062afc3d5eba
 `;
 
 const Button = styled.button`

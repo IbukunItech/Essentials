@@ -15,11 +15,19 @@ export const useLogin = () => {
             const res = await signInWithEmailAndPassword(fireAuth, email, password);
 
             dispatch({
+<<<<<<< HEAD
                 type: "LOGIN",
+=======
+                action: "LOGIN",
+>>>>>>> e0c72d534c301ecede8fb3cb628b062afc3d5eba
                 payload: res.user,
             });
             setIsPending(false);
             history.push("/");
+<<<<<<< HEAD
+=======
+            // console.log(res.user);
+>>>>>>> e0c72d534c301ecede8fb3cb628b062afc3d5eba
         } catch (error) {
             setIsPending(false);
             console.log(error.message);
