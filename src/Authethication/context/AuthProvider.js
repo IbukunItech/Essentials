@@ -4,8 +4,9 @@ import { fetchReducer } from "../reducer/fetchReducer";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(fetchReducer, { user: null });
-  console.log("auth state", state);
+    const [state, dispatch] = useReducer(fetchReducer, { user: null });
+    console.log("auth state", state);
 
-  return <AuthContext.Provider value={{ ...state, dispatch }}>{children}</AuthContext.Provider>;
+    return <AuthContext.Provider value = {
+        {...state, dispatch } } > { children } < /AuthContext.Provider>;
 };
