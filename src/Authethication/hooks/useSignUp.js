@@ -3,21 +3,16 @@ import { useState } from "react";
 import { fireAuth } from "../firebase/config";
 import { useHistory } from "react-router";
 import { useAuthContext } from "./useAuthContext";
-<<<<<<< HEAD
+import { firestore } from "../firebase/config";
+import { setDoc, doc, collection } from "@firebase/firestore";
 
-=======
->>>>>>> e0c72d534c301ecede8fb3cb628b062afc3d5eba
 export const useSignUp = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(null);
     const history = useHistory();
     const { dispatch } = useAuthContext();
 
-<<<<<<< HEAD
-    const Logon = async(email, password, displayName) => {
-=======
-    const signup = async(email, password, displayName) => {
->>>>>>> e0c72d534c301ecede8fb3cb628b062afc3d5eba
+    const Logon = async(email, password, displayName, photo) => {
         setIsLoading(true);
         try {
             const res = await createUserWithEmailAndPassword(fireAuth, email, password);
@@ -25,23 +20,20 @@ export const useSignUp = () => {
             if (!res) {
                 throw Error("An error occurred");
             }
-            updateProfile(res.user, { displayName });
+            updateProfile(res.user, { displayName, photoURL: photo });
 
             dispatch({
-<<<<<<< HEAD
                 type: "SIGNUP",
                 payload: res.user,
             });
 
             setIsLoading(false);
 
-=======
-                action: "SIGNUP",
-                payload: res.user,
-            });
-            setIsLoading(false);
-            // console.log(res.user);
->>>>>>> e0c72d534c301ecede8fb3cb628b062afc3d5eba
+            if (res) {
+                const documentRef = doc(firestore, "userdata", res.user.uid);
+                const payload = { email, displayName, photo: photo ? photo : displayName.chatAt(0) };
+                await setDoc(documentRef, payload);
+            }
             history.push("/");
         } catch (error) {
             setIsLoading(false);
@@ -63,9 +55,5 @@ export const useSignUp = () => {
             }
         }
     };
-<<<<<<< HEAD
     return { Logon, isLoading, isError };
-=======
-    return { signup, isLoading, isError };
->>>>>>> e0c72d534c301ecede8fb3cb628b062afc3d5eba
 };

@@ -5,18 +5,45 @@ import { Loaders } from "../hooks/Loaders";
 import { FcGoogle } from "react-icons/fc";
 import { GrFacebookOption } from "react-icons/gr";
 import { AiOutlineUser, AiOutlineMail, AiOutlineLock } from "react-icons/ai";
+import img from "../helpers/placeholder.png";
+import { getStorage, ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 
 const Signup = () => {
   const [displayName, setDisplayName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [photo, setPhoto] = useState(img);
+
   const { Logon, isLoading, isError } = useSignUp();
 
   const SignUp = () => {
-    Logon(email, password, displayName);
+    Logon(email, password, displayName, photo);
 
     console.log(email, password, displayName);
   };
+
+  const handleImages = async (e) => {
+    const file = e.target.files[0];
+    const saveImg = URL.createObjectURL(file);
+    setPhoto(saveImg);
+
+    //  to upload an Image
+    const storage = getStorage();
+    const storageRef = ref(storage, "profileImg/ " + file.name);
+
+    const uploadTask = uploadBytesResumable(storageRef, file);
+
+    await uploadTask.on(
+      "state_changed",
+      (snapshot) => {
+        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        console.log(progress);
+      },
+      (err) => err.message,
+      () => getDownloadURL(uploadTask.snapshot.ref).then((URL) => console.log(URL))
+    );
+  };
+
   return (
     <Container>
       <Wrapper>
@@ -32,9 +59,9 @@ const Signup = () => {
         <p>Or use your email for registration</p>
         <InputHolder>
           <ImageHolder>
-            <Image />
+            <Image src={photo} />
             <InputLabel htmlFor="pix">Upload Image</InputLabel>
-            <InputImage type="file" id="pix" />
+            <InputImage type="file" id="pix" onChange={handleImages} />
           </ImageHolder>
           <Inputts>
             <AiOutlineUser />
