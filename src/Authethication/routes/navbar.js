@@ -2,13 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { useLogout } from "../hooks/useLogout";
+import { useAuthContext } from "../hooks/useAuthContext";
 
 const NavBar = () => {
   const { logOut } = useLogout();
+  const { user } = useAuthContext();
 
   const logout = () => {
     logOut();
   };
+  console.log("user ", user);
   return (
     <Container>
       <Wrapper>
@@ -17,9 +20,16 @@ const NavBar = () => {
         </NavLink>
 
         <Navigation>
-          <Navs to="/login"> Login </Navs>
-          <Navs to="/signup"> SignUp </Navs>
-          <NavBtn onClick={logout}> Logout </NavBtn>
+          {user && <p style={{ color: "white" }}> Welcome {user.displayName}</p>}
+          {!user && (
+            <>
+              {user && <p style={{ color: "white" }}>{user.displayName}</p>}
+              <Navs to="/login"> Login </Navs>
+              <Navs to="/signup"> SignUp </Navs>
+            </>
+          )}
+
+          {user && <NavBtn onClick={logout}> Logout </NavBtn>}
         </Navigation>
       </Wrapper>
     </Container>

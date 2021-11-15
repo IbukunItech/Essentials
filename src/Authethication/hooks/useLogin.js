@@ -1,11 +1,12 @@
 import { signInWithEmailAndPassword } from "@firebase/auth";
 import { fireAuth } from "../firebase/config";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { useAuthContext } from "./useAuthContext";
 export const useLogin = () => {
     const [isPending, setIsPending] = useState(false);
     const [isError, setIsError] = useState(null);
+    const [IsCancelled, setIsCancelled] = useState(false);
     const history = useHistory();
     const { dispatch } = useAuthContext();
 
@@ -18,12 +19,16 @@ export const useLogin = () => {
                 type: "LOGIN",
                 payload: res.user,
             });
-            setIsPending(false);
+
+            if (!IsCancelled) {
+                setIsPending(false);
+                setIsError(null);
+            }
             history.push("/");
         } catch (error) {
             setIsPending(false);
             console.log(error.message);
-            switch (error.type) {
+            switch (error.message) {
                 case "Firebase: Error (auth/network-request-failed).":
                     return setIsError("Connection failure");
                 case "Firebase: Error (auth/email-already-in-use).":
@@ -41,5 +46,9 @@ export const useLogin = () => {
             }
         }
     };
+    useEffect(() => {
+        return () => setIsCancelled(true);
+    });
+
     return { Login, isError, isPending };
 };

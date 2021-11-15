@@ -1,5 +1,5 @@
 import { createUserWithEmailAndPassword, updateProfile } from "@firebase/auth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { fireAuth } from "../firebase/config";
 import { useHistory } from "react-router";
 import { useAuthContext } from "./useAuthContext";
@@ -7,6 +7,7 @@ import { firestore } from "../firebase/config";
 import { setDoc, doc, collection } from "@firebase/firestore";
 
 export const useSignUp = () => {
+    const [isCancelled, setIsCancelled] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(null);
     const history = useHistory();
@@ -27,7 +28,9 @@ export const useSignUp = () => {
                 payload: res.user,
             });
 
-            setIsLoading(false);
+            if (!isCancelled) {
+                setIsLoading(false);
+            }
 
             if (res) {
                 const documentRef = doc(firestore, "userdata", res.user.uid);
@@ -37,6 +40,7 @@ export const useSignUp = () => {
             history.push("/");
         } catch (error) {
             setIsLoading(false);
+            console.log(error.message);
             switch (error.message) {
                 case "Firebase: Error (auth/network-request-failed).":
                     return setIsError("Connection failure");
@@ -55,5 +59,9 @@ export const useSignUp = () => {
             }
         }
     };
+
+    useEffect(() => {
+        return () => setIsCancelled(true);
+    });
     return { Logon, isLoading, isError };
 };
