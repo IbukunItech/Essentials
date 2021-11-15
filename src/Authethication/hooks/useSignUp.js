@@ -27,17 +27,16 @@ export const useSignUp = () => {
                 type: "SIGNUP",
                 payload: res.user,
             });
-
             if (!isCancelled) {
                 setIsLoading(false);
+                setIsError(null);
             }
-
+            history.push("/");
             if (res) {
                 const documentRef = doc(firestore, "userdata", res.user.uid);
                 const payload = { email, displayName, photo: photo ? photo : displayName.chatAt(0) };
                 await setDoc(documentRef, payload);
             }
-            history.push("/");
         } catch (error) {
             setIsLoading(false);
             console.log(error.message);

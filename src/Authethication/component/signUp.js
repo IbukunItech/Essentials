@@ -7,12 +7,14 @@ import { GrFacebookOption } from "react-icons/gr";
 import { AiOutlineUser, AiOutlineMail, AiOutlineLock } from "react-icons/ai";
 import img from "../helpers/placeholder.png";
 import { getStorage, ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
+import { useGoogle } from "../hooks/useGoogle";
 
 const Signup = () => {
   const [displayName, setDisplayName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [photo, setPhoto] = useState(img);
+  const { signInGoogle } = useGoogle();
 
   const { Logon, isLoading, isError } = useSignUp();
 
@@ -20,6 +22,10 @@ const Signup = () => {
     Logon(email, password, displayName, photo);
 
     console.log(email, password, displayName);
+  };
+
+  const GoogleSignIn = () => {
+    signInGoogle();
   };
 
   const handleImages = async (e) => {
@@ -49,7 +55,7 @@ const Signup = () => {
       <Wrapper>
         <HeaderText>Create account</HeaderText>
         <IconHolder>
-          <Icons>
+          <Icons onClick={GoogleSignIn}>
             <FcGoogle />
           </Icons>
           <Icons>

@@ -7,6 +7,8 @@ export const fetchReducer = (state, action) => {
             return {...state, user: action.payload };
         case "LOGOUT":
             return {...state, user: action.payload };
+        case "AUTHISREADY":
+            return {...state, user: action.payload, authIsReady: true };
         default:
             return state;
     }

@@ -5,11 +5,13 @@ import { fireAuth } from "../firebase/config";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(fetchReducer, { user: null });
+  const [state, dispatch] = useReducer(fetchReducer, { user: null, AuthIsReady: false });
+  // to get the current user
   useEffect(() => {
-    onAuthStateChanged(fireAuth, (user) => ({
-      user: user,
-    }));
+    const unsub = onAuthStateChanged(fireAuth, (user) => {
+      return dispatch({ type: "AUTHISREADY", payload: user });
+    });
+    unsub();
   }, []);
   console.log("auth state", state);
 
