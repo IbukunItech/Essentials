@@ -1,9 +1,10 @@
 import React from "react";
+import TaibatHomePagee from "./TaibatHomePage/taibatHomePagee";
 
 const App = () => {
   return (
     <div>
-      <h1>Hello Essentials</h1>
+      <TaibatHomePagee />
     </div>
   );
 };
