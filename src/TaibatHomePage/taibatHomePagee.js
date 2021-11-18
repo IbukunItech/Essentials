@@ -10,7 +10,10 @@ const TaibatHomePagee = () => {
   return (
     <Container>
       <Wrapper>
-        <Button>
+        <Button // target="_blank will open the socials in a new tab"
+          href="mailto: ibukunoluwafamuyiwa@gmail.com"
+          target="_target"
+        >
           <BsChatDots />
         </Button>
         <TaibatHomePage />
@@ -35,9 +38,9 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-const Button = styled.div`
+const Button = styled.a`
   background: #eeeeee;
-  color: black;
+  color: #387546;
   position: fixed;
   right: 20px;
   bottom: 100px;

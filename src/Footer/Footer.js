@@ -111,14 +111,12 @@ const Footer = () => {
 export default Footer;
 
 const Nav = styled.div`
-display: flex;
-align-items: center;
-margin: 0 10px;
-color: blue;
-// justify-content: space-between;
-// object-spacing: 5px;
-
-Kehinde Surulere, [18.11.21 08:57]
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  color: blue;
+  // justify-content: space-between;
+  // object-spacing: 5px;
 `;
 
 const Container = styled.div`
@@ -197,7 +195,7 @@ const Box = styled.div`
 
   justify-content: center;
   margin-bottom: 20px;
-  background-color: #0a1b42;
+  background: #387546;
   justify-content: space-between;
   padding-left: 100px;
   padding-right: 140px;
