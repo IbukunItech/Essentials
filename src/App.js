@@ -1,13 +1,14 @@
 import React from "react";
-import TaibatHomePagee from "./TaibatHomePage/taibatHomePagee";
-import Footer from "./Footer/Footer";
-
+import Routes from "./Authethication/routes/route";
 const App = () => {
   return (
     <div>
-      <TaibatHomePagee />
-      <Footer />
+      <Routes />
     </div>
   );
 };
 export default App;
+{
+  /* <TaibatHomePagee />
+      <Footer /> */
+}
