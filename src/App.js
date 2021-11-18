@@ -1,11 +1,13 @@
-import Details from "./Mayowa/Details";
+import React from 'react'
+import AutoDetails from './Mayowa/AutoDetails'
+import FashionDetails from './Mayowa/FashionDetails'
 
-function App() {
+const App = () => {
   return (
     <div>
-      <Details />
+     
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
