@@ -2,10 +2,10 @@ import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { useState } from "react";
 import carImg from "../Asset/CARS.jpg";
-import salonImg from "../Asset/salons.jpg";
+import salonImg from "../Asset/tailor.jpg";
 import tyresImg from "../Asset/tyres.jpg";
-import vulcaImg from "../Asset/vulcaniz.jpg";
-import tailorsImg from "../Asset/tailors.jpg";
+import vulcaImg from "../Asset/fash.jpg";
+import tailorsImg from "../Asset/download.jpg";
 import plumbImg from "../Asset/plumb.jpg";
 
 const Hero = () => {
