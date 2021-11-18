@@ -3,12 +3,6 @@ import Header from "./Header/Header";
 
 import Routes from "./Authethication/routes/route";
 const App = () => {
-  return (
-    <div>
-
-      <Routes />
-
-  );
+  return <Routes />;
 };
 export default App;
-

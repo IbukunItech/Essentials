@@ -8,8 +8,10 @@ import vulcaImg from "../../Asset/vulcaniz.jpg";
 import tailorsImg from "../../Asset/tailors.jpg";
 import plumbImg from "../../Asset/plumb.jpg";
 import { Link } from "react-router-dom";
+import { useAuthContext } from "../hooks/useAuthContext";
 
 const Hero = () => {
+  const { user } = useAuthContext();
   const [image, setImage] = useState([carImg, salonImg, tyresImg, vulcaImg, tailorsImg, plumbImg]);
   const [index, setIndex] = React.useState(0);
   const delay = 5000;
@@ -46,7 +48,7 @@ const Hero = () => {
             <span>Essentials</span>
             are ready to make life easy at just one go!
           </Text>
-          <Button to="/login">Join us!</Button>
+          {!user && <Button to="/login">Join us!</Button>}
         </TextHolder>
       </Wrapper>
     </Container>

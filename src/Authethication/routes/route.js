@@ -6,7 +6,6 @@ import Homepage from "./homepage";
 import NavBar from "./navbar";
 import { AuthProvider } from "../context/AuthProvider";
 import { useAuthContext } from "../hooks/useAuthContext";
-import Hero from "./hero";
 
 const Routes = () => {
   const { authIsReady } = useAuthContext();
