@@ -1,0 +1,63 @@
+[
+    {
+     "id":"5",
+     "section":"Hairdressing",
+     "image":"/asset/hairdresser.jpg",
+     "time":"",
+     "catalogue":"",
+     "name of company":"",
+     "img4":"",
+     "vocation":"Hair-dressers",
+     "Contact":241271,
+     "writeup": "",
+     "location":"",
+     "companyname":""
+     },
+     {
+     "id":"6",
+     "section":"Tailoring/Fashion-Designing",
+     "image":"/asset/tairlor.jpg",
+     "time":"",
+     "catalogue":"",
+     "name of company":"",
+     "img5":"",
+     "vocation":"Tailors",
+     "Contact":241271,
+     "writeup": "This is the isssigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value buIcon' is assigned a value buIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedt never usedt never used ",
+
+     "location": "30 makinde ojuelegba, surelere",
+     "companyname": "Company name SoSo Cleaning service"
+     
+     },
+     {
+     "id":"7",
+     "section":"Makeup Artistry",
+     "image":"/asset/makeup.jpg",
+     "time":"",
+     "catalogue":"",
+     "name of company":"",
+     "vocation":"make up",
+     "img6":"",
+     "Contact":241271,
+     "writeup": "This is the isssigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value buIcon' is assigned a value buIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedt never usedt never used ",
+
+     "location": "30 makinde ojuelegba, surelere",
+     "companyname": "Company name SoSo Cleaning service"
+     },
+     {
+     "id":"8",
+     "section":"Skincare/Spa",
+     "image":"/asset/spa.jpg",
+     "time":"",
+     "catalogue":"",
+     "vocation":"skin care",
+     "name of company":"",
+     "img7":"",
+     "Contact":241271,
+     "writeup": "This is the isssigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value buIcon' is assigned a value buIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedIcon' is assigned a value but never usedt never usedt never used ",
+
+     "location": "30 makinde ojuelegba, surelere",
+     "companyname": "Company name SoSo Cleaning service"
+     }
+ 
+]
