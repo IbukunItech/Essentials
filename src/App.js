@@ -1,10 +1,9 @@
 import React from "react";
+import Ibkdetails from './Ibkdetails'
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello Essentials</h1>
-    </div>
+    <Ibkdetails />
   );
 };
 export default App;
