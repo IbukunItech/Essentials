@@ -40,7 +40,7 @@ const Button = styled.div`
   color: black;
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  bottom: 100px;
   width: 50px;
   height: 50px;
   font-size: 35px;
