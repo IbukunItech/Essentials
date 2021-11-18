@@ -25,8 +25,8 @@ const TaibatHomePage = () => {
           <Content>
             <Title>Automobile Services</Title>
             <SubTitle>
-              Automotive service technicians also referred to as, auto mechanic,
-              maintain, repair, inspect cars, light trucks, and other vehicles.
+              Automotive service technicians also referred to as, auto mechanic, maintain, repair,
+              inspect cars, light trucks, and other vehicles.
             </SubTitle>
           </Content>
           <ImageHolder>

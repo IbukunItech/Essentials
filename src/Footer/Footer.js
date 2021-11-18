@@ -85,17 +85,9 @@ const Footer = () => {
             </Icon>
           </Nav>
 
-          <Nav>
-            <span>
-              <a href="">Contact Us</a>
-            </span>
-          </Nav>
+          <Nav>Contact Us</Nav>
 
-          <Nav>
-            <span>
-              <a href="">About</a>
-            </span>
-          </Nav>
+          <Nav>About</Nav>
           <Call>
             <Icon>
               <MdCall />
@@ -114,40 +106,21 @@ const Nav = styled.div`
   display: flex;
   align-items: center;
   margin: 0 10px;
-  color: blue;
-  // justify-content: space-between;
-  // object-spacing: 5px;
+  color: black;
+
 `;
 
-const Container = styled.div`
-  width: 100%;
-  height: 100%;
-`;
+const Container = styled.div``;
 const Wrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  // display: flex;
-  min-height: 35vh;
-  flex-wrap: wrap;
-  font-size: 18px;
-  padding-top: 20px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #ffffff;
-  margin: 50px 0;
+  display: block;
 `;
-// const Title = styled.div`
-// font-size: 30px;
-// font-weight: bold;
-// `
+
 const Section = styled.div`
   align-items: center;
   margin-bottom: 10px;
   display: flex;
   display-flex: wrap;
   justify-content: center;
-  // flex-direction: column;
 `;
 const Sub = styled.div`
   flex-direction: column;
@@ -173,7 +146,7 @@ const Icon = styled.div`
   height: 40px;
   display: flex;
   align-items: center;
-  size: 40px;
+  font-size: 40px;
 `;
 const Last = styled.div`
   justify-content: space-between;
@@ -190,16 +163,15 @@ const List = styled.div`
 `;
 const Box = styled.div`
   // width: 100%;
-  height: 30vh;
+  height: 250px;
   display: flex;
-
-  justify-content: center;
-  margin-bottom: 20px;
-  background: #387546;
+  align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: #387546;
   padding-left: 100px;
   padding-right: 140px;
-  padding-top: 30px;
+
   color: white;
   // font-weight: bold;
 `;
