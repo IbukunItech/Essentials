@@ -46,7 +46,6 @@ const Header = () => {
               onMouseLeave={onMouseLeave}
             >
               <MdArrowDropDown />
-              {dropdown ? <Dropdown /> : null}
             </Icon>
           </All>
           <Input placeholder="Search for Artisan" />
@@ -195,7 +194,7 @@ const Container = styled.div`
   width: 100%;
   height: 100px;
   background-color: green;
-  //   background: linear-gradient(180deg, green, lightgreen);
+  // background: linear-gradient(180deg, green, lightgreen);
   color: white;
 `;
 
