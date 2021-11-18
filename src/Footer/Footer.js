@@ -107,6 +107,7 @@ const Nav = styled.div`
   align-items: center;
   margin: 0 10px;
   color: black;
+
 `;
 
 const Container = styled.div``;
