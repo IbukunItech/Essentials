@@ -8,3 +8,7 @@ const App = () => {
   );
 };
 export default App;
+{
+  /* <TaibatHomePagee />
+      <Footer /> */
+}

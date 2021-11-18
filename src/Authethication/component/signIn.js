@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useLogin } from "../hooks/useLogin";
 import { Loaders } from "../hooks/Loaders";
 import { AiOutlineUser, AiOutlineMail, AiOutlineLock } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
   const [password, setPassword] = useState("");
@@ -17,40 +18,77 @@ const SignIn = () => {
   return (
     <Container>
       <Wrapper>
-        <InputHolder>
-          <Inputts>
-            <AiOutlineMail />
-            <Input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </Inputts>
-          <Inputts>
-            <AiOutlineLock />
-            <Input
-              type="password"
-              placeholder="
+        <InputCard>
+          <SignInText>
+            <Text>Welcome Back!</Text>
+          </SignInText>
+          <InputHolder>
+            <Inputts>
+              <AiOutlineMail />
+              <Input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </Inputts>
+            <Inputts>
+              <AiOutlineLock />
+              <Input
+                type="password"
+                placeholder="
              Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </Inputts>
-          {!isPending && <Button onClick={login}>Sign In</Button>}
-          {isPending && (
-            <Button style={{ display: "flex" }}>
-              Logging in <Loaders />
-            </Button>
-          )}
-          {isError && <p>{isError}</p>}
-        </InputHolder>
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </Inputts>
+            {!isPending && <Button onClick={login}>Sign In</Button>}
+            {isPending && (
+              <Button style={{ display: "flex" }}>
+                Logging in <Loaders />
+              </Button>
+            )}
+            {isError && <Err>{isError}</Err>}
+            <div>
+              New to <span style={{ color: "#387546", fontWeight: "bold" }}>Essentials</span>{" "}
+            </div>
+            <Div to="/signup">Join Now!</Div>
+          </InputHolder>
+        </InputCard>
       </Wrapper>
     </Container>
   );
 };
 
 export default SignIn;
+const Div = styled(Link)`
+  text-decoration: none;
+  color: #387546;
+  margin: 10px;
+`;
+const InputCard = styled.div`
+  width: 400px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 50px 0;
+  background: white;
+`;
+const Text = styled.div`
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0;
+`;
+const SignInText = styled.div``;
+const Err = styled.div`
+  text-align: left;
+  font-size: 14px;
+  color: red;
+`;
+
 const Inputts = styled.div`
   width: 250px;
   height: 40px;
@@ -65,7 +103,8 @@ const Inputts = styled.div`
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  min-heigh: 100vh;
+  min-height: 87.5vh;
+  background: #387546;
 `;
 const Wrapper = styled.div`
   width: 100%;
@@ -73,7 +112,8 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
+  min-height: 87.4vh;
 `;
 
 const InputHolder = styled.div`
@@ -101,8 +141,8 @@ const Button = styled.button`
   padding: 10px 20px;
   border: 0;
   outline: none;
-  background: #101522;
-  margin-top: 20px;
+  background: #387546;
+  margin: 20px 0;
   border-radius: 5px;
   color: #fff;
   text-align: center;

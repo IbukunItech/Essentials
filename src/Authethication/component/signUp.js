@@ -8,8 +8,10 @@ import { AiOutlineUser, AiOutlineMail, AiOutlineLock } from "react-icons/ai";
 import img from "../helpers/placeholder.png";
 import { getStorage, ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import { useGoogle } from "../hooks/useGoogle";
-
+import CircularProgress from "@mui/material/CircularProgress";
+import { Link } from "react-router-dom";
 const Signup = () => {
+  const [progress, setProgress] = useState(0);
   const [displayName, setDisplayName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -42,8 +44,9 @@ const Signup = () => {
     await uploadTask.on(
       "state_changed",
       (snapshot) => {
-        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        console.log(progress);
+        const count = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        console.log(count);
+        setProgress(count);
       },
       (err) => err.message,
       () => getDownloadURL(uploadTask.snapshot.ref).then((URL) => console.log(URL))
@@ -53,67 +56,116 @@ const Signup = () => {
   return (
     <Container>
       <Wrapper>
-        <HeaderText>Create account</HeaderText>
-        <IconHolder>
-          <Icons onClick={GoogleSignIn}>
-            <FcGoogle />
-          </Icons>
-          <Icons>
-            <GrFacebookOption />
-          </Icons>
-        </IconHolder>
-        <p>Or use your email for registration</p>
-        <InputHolder>
-          <ImageHolder>
-            <Image src={photo} />
-            <InputLabel htmlFor="pix">Upload Image</InputLabel>
-            <InputImage type="file" id="pix" onChange={handleImages} />
-          </ImageHolder>
-          <Inputts>
-            <AiOutlineUser />
-            <Input
-              type="text"
-              placeholder="username"
-              value={displayName}
-              onChange={(e) => setDisplayName(e.target.value)}
-            />
-          </Inputts>
-          <Inputts>
-            <AiOutlineMail />
-            <Input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </Inputts>
-          <Inputts>
-            <AiOutlineLock />
-            <Input
-              type="password"
-              placeholder="
+        <InputCard>
+          <div>
+            <HeaderText>
+              Join <span>Essentials</span>{" "}
+            </HeaderText>
+            <IconHolder>
+              {" "}
+              Sign up with
+              <Icons onClick={GoogleSignIn}>
+                <FcGoogle />
+              </Icons>
+            </IconHolder>
+            <p>Or use your email for registration</p>
+          </div>
+
+          <InputHolder>
+            <ImageHolder>
+              <ImageUpload>
+                {progress > 0 && progress < 90 ? (
+                  <ImgVeil>
+                    <CircularProgress variant="determinate" value={progress} />
+                  </ImgVeil>
+                ) : null}
+
+                <Image src={photo} />
+              </ImageUpload>
+              <InputLabel htmlFor="pix">Upload Image</InputLabel>
+
+              <InputImage type="file" id="pix" accept="image/" onChange={handleImages} />
+            </ImageHolder>
+            <Inputts>
+              <AiOutlineUser />
+              <Input
+                type="text"
+                placeholder="username"
+                value={displayName}
+                onChange={(e) => setDisplayName(e.target.value)}
+              />
+            </Inputts>
+            <Inputts>
+              <AiOutlineMail />
+              <Input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </Inputts>
+            <Inputts>
+              <AiOutlineLock />
+              <Input
+                type="password"
+                placeholder="
              Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </Inputts>
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </Inputts>
 
-          {!isLoading && <Button onClick={SignUp}>Sign up</Button>}
+            {!isLoading && <Button onClick={SignUp}>Sign up</Button>}
 
-          {isLoading && (
-            <Button style={{ display: "flex" }}>
-              Signing Up <Loaders />
-            </Button>
-          )}
-          {isError && <p>{isError}</p>}
-        </InputHolder>
+            {isLoading && (
+              <Button style={{ display: "flex" }}>
+                Signing Up <Loaders />
+              </Button>
+            )}
+            {isError && <p>{isError}</p>}
+            <div>Already have an Account? </div>
+            <Div to="/login">Sign In</Div>
+          </InputHolder>
+        </InputCard>
       </Wrapper>
     </Container>
   );
 };
 
 export default Signup;
+const Div = styled(Link)`
+  text-decoration: none;
+  color: #387546;
+`;
+const InputCard = styled.div`
+  display: flex;
+  background: white;
+  align-items: center;
+  padding: 10px 50px;
+  border-radius: 10px;
+`;
+const ImageUpload = styled.div`
+  position: relative;
 
+  width: 100px;
+  height: 120px;
+  margin: 5px 0;
+`;
+const ImgVeil = styled.div`
+  background: rgb(0, 0, 0, 0.7);
+  width: 100px;
+  height: 100px;
+  margin: 5px 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+`;
 const Inputts = styled.div`
   width: 250px;
   height: 40px;
@@ -128,6 +180,7 @@ const Inputts = styled.div`
 const IconHolder = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 const Icons = styled.div`
   width: 30px;
@@ -148,15 +201,22 @@ const Icons = styled.div`
 `;
 const HeaderText = styled.div`
   font-size: 35px;
-  font-weight: 400;
+  font-weight: bold;
+  margin: 20px 0;
+  span {
+    color: #387546;
+  }
 `;
 const Image = styled.img`
   width: 100px;
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  background: black;
+  border: 0;
   margin: 5px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 const InputLabel = styled.label`
   padding: 5px 10px;
@@ -185,7 +245,8 @@ const ImageHolder = styled.div`
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  min-heigh: 80vh;
+  min-height: 87.3vh;
+  background: #387546;
 `;
 const Wrapper = styled.div`
   width: 100%;
@@ -193,7 +254,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: 80vh;
+  min-height: 87.3vh;
 `;
 
 const InputHolder = styled.div`
@@ -228,7 +289,7 @@ const Button = styled.button`
   padding: 10px 20px;
   border: 0;
   outline: none;
-  background: #101522;
+  background: #387546;
   margin: 10px 0;
   border-radius: 5px;
   color: #fff;
