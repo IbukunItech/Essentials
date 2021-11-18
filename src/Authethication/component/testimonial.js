@@ -11,7 +11,9 @@ const Testimonials = () => {
       <Wrapper>
         <Content>
           <Title>Testimonials</Title>
-          <Desc>Our dear customers said about us</Desc>
+          <Desc>
+            What customers have to say about <span>Essentials</span>
+          </Desc>
         </Content>
         <Section>
           <CardHolder1>
@@ -77,9 +79,14 @@ const Quote = styled.div`
 `;
 const Desc = styled.div`
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 400;
   text-align: center;
   padding: 5px 20px 0 0;
+
+  span {
+    font-weight: bold;
+    color: #387546;
+  }
 `;
 const CardHolder1 = styled.div`
   position: relative;

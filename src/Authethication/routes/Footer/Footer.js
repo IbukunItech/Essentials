@@ -66,34 +66,35 @@ const Footer = () => {
           </Sub>
         </Box>
         <Last>
-          <Icon>
-            <FaFacebook />
-          </Icon>
-          <Icon>
-            <AiFillTwitterCircle />
-          </Icon>
-          <Icon>
-            <FaInstagramSquare />
-          </Icon>
-          <Icon>
-            <BsLinkedin />
-          </Icon>
+          <IconHolder>
+            <Icon>
+              <FaFacebook />
+            </Icon>
+            <Icon>
+              <AiFillTwitterCircle />
+            </Icon>
+            <Icon>
+              <FaInstagramSquare />
+            </Icon>
+            <Icon>
+              <BsLinkedin />
+            </Icon>
 
-          <Nav>
             <Icon>
               <MdOutlineMail />
             </Icon>
-          </Nav>
+          </IconHolder>
+          <Contact>
+            <Nav>Contact Us</Nav>
 
-          <Nav>Contact Us</Nav>
-
-          <Nav>About</Nav>
-          <Call>
-            <Icon>
-              <MdCall />
-            </Icon>
-            <Number>+2348000000000</Number>
-          </Call>
+            <Nav>About</Nav>
+            <Call>
+              <Icon>
+                <MdCall />
+              </Icon>
+              <Number>+2348000000000</Number>
+            </Call>
+          </Contact>
         </Last>
       </Wrapper>
     </Container>
@@ -101,18 +102,28 @@ const Footer = () => {
 };
 
 export default Footer;
+const IconHolder = styled.div`
+  display: flex;
+  align-items: center;
+`;
+const Contact = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
 const Nav = styled.div`
   display: flex;
   align-items: center;
   margin: 0 10px;
   color: black;
-
 `;
 
-const Container = styled.div``;
+const Container = styled.div`
+  margin-top: 20px;
+`;
 const Wrapper = styled.div`
   display: block;
+  margin-top: 20px;
 `;
 
 const Section = styled.div`
@@ -121,6 +132,7 @@ const Section = styled.div`
   display: flex;
   display-flex: wrap;
   justify-content: center;
+  margin-top: 50px;
 `;
 const Sub = styled.div`
   flex-direction: column;
@@ -147,22 +159,20 @@ const Icon = styled.div`
   display: flex;
   align-items: center;
   font-size: 40px;
+  margin: 0 10px;
+  color: #387546;
 `;
 const Last = styled.div`
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 60px;
-  padding-right: 100px;
   display: flex;
-  // display-flex: wrap;
-  // justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0;
 `;
 const List = styled.div`
   flex-direction: flex;
   text-weight: bold;
 `;
 const Box = styled.div`
-  // width: 100%;
   height: 250px;
   display: flex;
   align-items: center;
@@ -173,7 +183,6 @@ const Box = styled.div`
   padding-right: 140px;
 
   color: white;
-  // font-weight: bold;
 `;
 
 const Number = styled.div`

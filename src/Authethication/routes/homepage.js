@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Testimonials from "../component/testimonial";
 import Hero from "./hero";
 import TaibatHome from "../../TaibatHomePage/taibatHomePagee";
-import Footer from "../../Footer/Footer";
+import Footer from "./Footer/Footer";
 
 const Homepage = () => {
   return (

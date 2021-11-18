@@ -6,6 +6,7 @@ import { useAuthContext } from "../hooks/useAuthContext";
 import { AiOutlineHome, AiOutlineInfoCircle, AiOutlineLogin } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { SiGnuprivacyguard } from "react-icons/si";
+import Header from "../../Header/Header";
 
 const NavBar = () => {
   const { logOut } = useLogout();
@@ -41,6 +42,7 @@ const NavBar = () => {
                 <span>Profile</span>
               </Navs>
             </Navigation>
+            <Header />
             <p style={{ color: "white" }}> Welcome {user.displayName}</p>
             <NavBtn onClick={logout} style={navSignUp}>
               {" "}
@@ -49,6 +51,7 @@ const NavBar = () => {
           </div>
         )}
         <Navigation></Navigation>
+
         {!user && (
           <>
             <div style={{ display: "flex" }}>

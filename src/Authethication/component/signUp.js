@@ -136,6 +136,7 @@ export default Signup;
 const Div = styled(Link)`
   text-decoration: none;
   color: #387546;
+  padding-bottom: 20px;
 `;
 const InputCard = styled.div`
   display: flex;
