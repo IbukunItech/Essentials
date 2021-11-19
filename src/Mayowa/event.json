@@ -1,0 +1,55 @@
+[{
+        "id": "9",
+        "section": "Photography",
+        "image": "/asset/photo.jpg",
+        "name": "Funsho Odewole",
+        "Contact": 241271,
+        "location": "Surelere",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum consectetur a dolorum voluptatem voluptatibus ab soluta aliquid dolores modi totam similique officia, facere error quasi labore eveniet fuga debitis.",
+        "rating": "4.5"
+    },
+    {
+        "id": "10",
+        "section": "Catering Services",
+        "image": "/asset/caterer.jpg",
+        "name": "Funsho Odewole",
+        "Contact": 241271,
+        "location": "Ketu",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum consectetur a dolorum voluptatem voluptatibus ab soluta aliquid dolores modi totam similique officia, facere error quasi labore eveniet fuga debitis.",
+
+        "rating": "4.5"
+    },
+    {
+        "id": "11",
+        "section": "Decorators",
+        "image": "/asset/decorators.jpg",
+        "name": "Funsho Odewole",
+        "Contact": 241271,
+        "location": "Surelere",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum consectetur a dolorum voluptatem voluptatibus ab soluta aliquid dolores modi totam similique officia, facere error quasi labore eveniet fuga debitis.",
+
+        "rating": "4.5"
+    },
+    {
+        "id": "12",
+        "section": "Event Planning",
+        "image": "/asset/decorate.jpg",
+        "name": "Funsho Odewole",
+        "Contact": 241271,
+        "location": "Ogudu",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum consectetur a dolorum voluptatem voluptatibus ab soluta aliquid dolores modi totam similique officia, facere error quasi labore eveniet fuga debitis.",
+
+        "rating": "4.5"
+    },
+    {
+        "id": "13",
+        "section": "Hall Rentages",
+        "image": "/asset/hall.jpg",
+        "name": "Funsho Odewole",
+        "Contact": 241271,
+        "location": "Ojota",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum consectetur a dolorum voluptatem voluptatibus ab soluta aliquid dolores modi totam similique officia, facere error quasi labore eveniet fuga debitis.",
+
+        "rating": "4.5"
+    }
+]

@@ -1,0 +1,72 @@
+[{
+        "id": "14",
+        "section": "Electronics",
+        "image": "/asset/electrician.jpg",
+        "name": "Funsho Odewole",
+        "Contact": 241271,
+        "location": "Surelere",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum consectetur a dolorum voluptatem voluptatibus ab soluta aliquid dolores modi totam similique officia, facere error quasi labore eveniet fuga debitis.",
+        "rating": "5.0"
+    },
+    {
+        "id": "15",
+        "section": "Painting Services",
+        "image": "/asset/painting.jpg",
+        "name": "Funsho Odewole",
+        "Contact": 241271,
+        "location": "Ketu",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum consectetur a dolorum voluptatem voluptatibus ab soluta aliquid dolores modi totam similique officia, facere error quasi labore eveniet fuga debitis.",
+        "rating": "4.5"
+    },
+    {
+        "id": "16",
+        "section": "Plumbering Services",
+        "image": "/asset/plumber.jpg",
+        "name": "Funsho Odewole",
+        "Contact": 241271,
+        "location": "Ojota",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum consectetur a dolorum voluptatem voluptatibus ab soluta aliquid dolores modi totam similique officia, facere error quasi labore eveniet fuga debitis.",
+        "rating": "4.0"
+    },
+    {
+        "id": "17",
+        "section": "Cleaning Services",
+        "image": "/asset/cleaningservices.jpg",
+        "name": "Funsho Odewole",
+        "Contact": 241271,
+        "location": "Ogudu",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum consectetur a dolorum voluptatem voluptatibus ab soluta aliquid dolores modi totam similique officia, facere error quasi labore eveniet fuga debitis.",
+        "rating": "5.0"
+    },
+    {
+        "id": "18",
+        "section": "Carpentry",
+        "image": "/asset/carpents.jpg",
+        "name": "Funsho Odewole",
+        "Contact": 241271,
+        "location": "Ojota",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum consectetur a dolorum voluptatem voluptatibus ab soluta aliquid dolores modi totam similique officia, facere error quasi labore eveniet fuga debitis.",
+        "rating": "4.0"
+    },
+    {
+        "id": "19",
+        "section": "Bricklaying Services",
+        "image": "/asset/brickslay.jpg",
+        "name": "Funsho Odewole",
+        "Contact": 241271,
+        "location": "Ketu",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum consectetur a dolorum voluptatem voluptatibus ab soluta aliquid dolores modi totam similique officia, facere error quasi labore eveniet fuga debitis.",
+        "rating": "3.0"
+    },
+
+    {
+        "id": "21",
+        "section": "Tiling Services",
+        "image": "/asset/tiler.jpg",
+        "name": "Funsho Odewole",
+        "Contact": 241271,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum consectetur a dolorum voluptatem voluptatibus ab soluta aliquid dolores modi totam similique officia, facere error quasi labore eveniet fuga debitis.",
+        "location": "Maryland",
+        "rating": "4.0"
+    }
+]

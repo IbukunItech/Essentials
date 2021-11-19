@@ -1,0 +1,83 @@
+[{
+        "id": "5",
+        "section": "Fashion",
+        "image": "/asset/hairdresser.jpg",
+        "name": "Ore Beauty World",
+        "Contact": "0812344365",
+        "location": "Ojota",
+        "description": "My name is Ore, and i am a profesional stylist. I have been in the business of hair making, makeup artistry Pedicure and manicure. I  also sell human hair, and i have been in the business of making human beautiful. I am always available for a job with an ability to move around.",
+        "rating": "5.0"
+    },
+    {
+        "id": "6",
+        "section": "Fashion ",
+        "image": "/asset/tairlor.jpg",
+        "name": "Ready2Wear",
+        "Contact": "0813624567",
+        "location": "Lekki",
+        "description": "Making great pattern and designs have been my passion since when i was little. Fashion design is my life, and I am here to help style you to your best self. I make dresses ranging from wedding and bridal wears, traditional ladies wears, and as well as Men clothing. Incase you also need fabrics, I do sell also, I am available at all time.",
+        "rating": "4.5"
+    },
+    {
+        "id": "7",
+        "section": "Makeup",
+        "image": "/asset/makeup.jpg",
+        "rating": "3.0",
+        "name": "Bummi",
+        "Contact": "0812344365",
+        "location": "Ibafo",
+        "description": "Hi there, I am a professional PLumber with ten years of experience, with my plumbing experience, i have been able to work with both individual and as well as Private organization. My professional include, Bathroom,toilet and kitchen plumbering,borehole plumbering. I am available with my contact."
+    },
+    {
+        "id": "8",
+        "section": "Makeup",
+        "image": "/asset/makeup.jpg",
+
+        "rating": "4.5",
+        "name": "Bummi",
+        "Contact": "0812344365",
+        "location": "Ibafo",
+        "description": "Hi there, I am a professional PLumber with ten years of experience, with my plumbing experience, i have been able to work with both individual and as well as Private organization. My professional include, Bathroom,toilet and kitchen plumbering,borehole plumbering. I am available with my contact."
+    },
+    {
+        "id": "9",
+        "section": "Makeup",
+        "image": "/asset/makeup.jpg",
+
+        "rating": "4.0",
+        "name": "Bummi",
+        "Contact": "0812344365",
+        "location": "Ibafo",
+        "description": "Hi there, I am a professional PLumber with ten years of experience, with my plumbing experience, i have been able to work with both individual and as well as Private organization. My professional include, Bathroom,toilet and kitchen plumbering,borehole plumbering. I am available with my contact."
+    },
+    {
+        "id": "10",
+        "section": "Skincare",
+        "image": "/asset/spa.jpg",
+        "rating": "4.0",
+        "name": "Grace Glows",
+        "Contact": "090984332",
+        "location": "Ikeja",
+        "description": "At Grace Glow, we make take care of all your skin needs and routine. We believe that your skin is the most important part of your body and at that, we have taking it up among ourselves to cater for your skin. We sell various kinds of body cream, bleaching cream, natural cream and all sort of quality made perfumes and perfume oil. We also offer home spa service, call us today to book a session withGrace Glow"
+    },
+    {
+        "id": "11",
+        "section": "Skincare",
+        "image": "/asset/spa.jpg",
+        "name": "Grace Glows",
+        "Contact": "090984332",
+        "rating": "4.5",
+        "location": "Ikeja",
+        "description": "At Grace Glow, we make take care of all your skin needs and routine. We believe that your skin is the most important part of your body and at that, we have taking it up among ourselves to cater for your skin. We sell various kinds of body cream, bleaching cream, natural cream and all sort of quality made perfumes and perfume oil. We also offer home spa service, call us today to book a session withGrace Glow"
+    },
+    {
+        "id": "12",
+        "section": "Skincare",
+        "image": "/asset/spa.jpg",
+        "name": "Grace Glows",
+        "rating": "3.0",
+        "Contact": "090984332",
+        "location": "Ikeja",
+        "description": "At Grace Glow, we make take care of all your skin needs and routine. We believe that your skin is the most important part of your body and at that, we have taking it up among ourselves to cater for your skin. We sell various kinds of body cream, bleaching cream, natural cream and all sort of quality made perfumes and perfume oil. We also offer home spa service, call us today to book a session withGrace Glow"
+    }
+]
