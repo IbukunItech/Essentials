@@ -3,31 +3,31 @@ import styled from "styled-components";
 import Log from "../Asset/logo.JPG";
 import Img4 from "../Asset/painters.jpg";
 import Img5 from "../Asset/plumber.jpg";
-// import Img3 from "../Asset/welder.jpg";
+import { Link } from "react-router-dom";
 
 const TaibatHomePage = () => {
   return (
     <Container>
       <Wrapper>
-        <Card>
+        <Card to="/maintenance">
           <CardHolder>
             <Heading>
               <Logo src={Log} />
               <Links>
-                <Link>
+                <MyLink>
                   PAGES <span>.</span>
-                </Link>
-                <Link>
+                </MyLink>
+                <MyLink>
                   STYLE <span>.</span>
-                </Link>
-                <Link>DOCS</Link>
+                </MyLink>
+                <MyLink>DOCS</MyLink>
               </Links>
             </Heading>
             <Content>
               <Title>House Maintenance</Title>
               <SubTitle>
-                A maintenance technician is responsible for the upkeep of a
-                facility, such as an apartment building or business office
+                A maintenance technician is responsible for the upkeep of a facility, such as an
+                apartment building or business office
               </SubTitle>
             </Content>
             <ImageHolder>
@@ -70,7 +70,9 @@ const Wrapper = styled.div`
   padding: 20px 0;
 `;
 
-const Card = styled.div`
+const Card = styled(Link)`
+  text-decoration: none;
+  color: inherit;
   width: 600px;
   height: 390px;
   border: solid 0.1px #41444b;
@@ -107,7 +109,7 @@ const Links = styled.div`
   margin-left: 300px;
 `;
 
-const Link = styled.div`
+const MyLink = styled.div`
   font-size: 7px;
   margin: 0 5px;
   display: flex;

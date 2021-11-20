@@ -29,7 +29,7 @@ const NavBar = () => {
                 </Icon>
                 <span>Home</span>
               </Navs>
-              <Navs to="/">
+              <Navs to="/detail">
                 <Icon>
                   <AiOutlineInfoCircle />
                 </Icon>
@@ -78,7 +78,7 @@ const NavBar = () => {
 export default NavBar;
 
 const navSignUp = {
-  border: "1px solid white",
+  border: "1px solid #db9b34",
 };
 
 const Icon = styled.div``;
@@ -88,7 +88,8 @@ const NavBtn = styled.div`
   text-transform: uppercase;
   margin: 0 10px;
   padding: 10px 15px;
-  color: white;
+  color: #db9b34;
+
   cursor: pointer;
   text-decoration: none;
   border-radius: 5px;
@@ -108,7 +109,8 @@ const Navs = styled(NavLink)`
   text-transform: uppercase;
   margin: 0 10px;
   padding: 10px 15px;
-  color: white;
+  color: #db9b34;
+  font-weight: bold;
   cursor: pointer;
   text-decoration: none;
   border-radius: 5px;
@@ -145,6 +147,8 @@ const Logo = styled(NavLink)`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #db9b34;
+  font-weight: bold;
 `;
 
 const Wrapper = styled.div`
@@ -160,28 +164,3 @@ const Container = styled.div`
   height: 80px;
   background: #387546;
 `;
-// {
-//   !user && (
-//     <>
-//       <Navs to="/login" activeStyle>
-//         {" "}
-//         Login{" "}
-//       </Navs>
-//       <Navs to="/signup" style={navSignUp}>
-//         {" "}
-//         SignUp{" "}
-//       </Navs>
-//     </>
-//   );
-// }
-
-// {
-//   user && (
-//     <div style={{ display: "flex" }}>
-//       <Navs to="/">Profile</Navs>
-//       <Navs to="/">Details</Navs>
-//       <p style={{ color: "white" }}> Welcome {user.displayName}</p>
-//       <NavBtn onClick={logout}> Logout </NavBtn>
-//     </div>
-//   );
-// }

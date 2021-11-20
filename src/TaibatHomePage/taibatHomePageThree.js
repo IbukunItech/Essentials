@@ -4,30 +4,30 @@ import Log from "../Asset/logo.JPG";
 import Img6 from "../Asset/hairs.jpg";
 import Img7 from "../Asset/makeup.jpg";
 import Img8 from "../Asset/fashions.jpg";
+import { Link } from "react-router-dom";
 
 const TaibatHomePage = () => {
   return (
     <Container>
       <Wrapper>
-        <Card>
+        <Card to="/fashion">
           <Heading>
             <Logo src={Log} />
             <Links>
-              <Link>
+              <MyLink>
                 PAGES <span>.</span>
-              </Link>
-              <Link>
+              </MyLink>
+              <MyLink>
                 STYLE <span>.</span>
-              </Link>
-              <Link>DOCS</Link>
+              </MyLink>
+              <MyLink>DOCS</MyLink>
             </Links>
           </Heading>
           <Content>
             <Title>Fashion/Beauty</Title>
             <SubTitle>
-              Ultimately, a beautician's responsibility is to improve the
-              physical appearance of clients and to help them to feel better
-              about themselves.
+              Ultimately, a beautician's responsibility is to improve the physical appearance of
+              clients and to help them to feel better about themselves.
             </SubTitle>
           </Content>
           <ImageHolder>
@@ -66,7 +66,9 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
-const Card = styled.div`
+const Card = styled(Link)`
+  text-decoration: none;
+  color: inherit;
   width: 600px;
   height: 390px;
   border: solid 0.1px #41444b;
@@ -102,7 +104,7 @@ const Links = styled.div`
   margin-left: 300px;
 `;
 
-const Link = styled.div`
+const MyLink = styled.div`
   font-size: 7px;
   margin: 0 5px;
   display: flex;
