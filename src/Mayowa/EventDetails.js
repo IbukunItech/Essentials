@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+
 import { BsInstagram, BsTwitter, BsFacebook, BsWhatsapp } from "react-icons/bs";
 import data from "./event.json";
 import { AiOutlinePhone, AiOutlineStar } from "react-icons/ai";
@@ -74,6 +75,7 @@ function EventDetails() {
 }
 
 export default EventDetails;
+
 const CardHolder = styled.div`
   display: flex;
   align-items: center;
@@ -153,15 +155,18 @@ const Card = styled.div`
   border: 1px solid lightgray;
   border-radius: 5px;
   margin: 20px;
+
 `;
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+
   min-height: 100vh;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+
 `;
 const Container = styled.div`
   width: 100%;
@@ -169,3 +174,4 @@ const Container = styled.div`
   min-height: 100vh;
   background: whitesmoke;
 `;
+
