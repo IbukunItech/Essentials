@@ -1,7 +1,3 @@
-
-import React from 'react'
-import AutoDetails from './Mayowa/AutoDetails'
-import FashionDetails from './Mayowa/FashionDetails'
 import React from "react";
 
 import "./index.css";
@@ -12,6 +8,5 @@ const App = () => {
       <Routes />
     </div>
   );
-
 };
 export default App;

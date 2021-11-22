@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-import { useState } from "react";
 import carImg from "../../Asset/CARS.jpg";
 import salonImg from "../../Asset/salons.jpg";
 import tyresImg from "../../Asset/tyres.jpg";
@@ -12,7 +11,7 @@ import { useAuthContext } from "../hooks/useAuthContext";
 
 const Hero = () => {
   const { user } = useAuthContext();
-  const [image, setImage] = useState([carImg, salonImg, tyresImg, vulcaImg, tailorsImg, plumbImg]);
+  const image = [carImg, salonImg, tyresImg, vulcaImg, tailorsImg, plumbImg];
   const [index, setIndex] = React.useState(0);
   const delay = 5000;
   const timeoutRef = useRef(null);
@@ -30,7 +29,7 @@ const Hero = () => {
       delay
     );
     return () => {};
-  }, [index]);
+  }, [index, image.length]);
 
   return (
     <Container>
@@ -66,10 +65,11 @@ const Button = styled(Link)`
   align-items: center;
   background: #387546;
   border-radius: 5px;
-  color: white;
+  color: #db9b34;
   font-size: 18px;
   margin: 10px 0;
   cursor: pointer;
+  font-weight: bold;
 `;
 const Text = styled.div`
   width: 400px;
@@ -97,18 +97,6 @@ const SlideShow = styled.div`
   overflow: hidden;
   max-width: 700px;
 `;
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  object-fit: contain;
-`;
-const ImageHolder = styled.div`
-  width: 100%;
-  height: 500px;
-  position: relative;
-  background: red;
-`;
 
 const Wrapper = styled.div`
   width: 100%;
@@ -117,6 +105,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
 `;
 const Container = styled.div`
   width: 100%;

@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import logo from "../Asset/logo.JPG";
-import { MdArrowDropDown } from "react-icons/md";
-import Dropdown from "./Dropdown";
 
 const Header = () => {
   const [search, setSearch] = useState("");

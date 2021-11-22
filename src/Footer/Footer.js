@@ -115,10 +115,6 @@ const Last = styled.div`
   justify-content: space-around;
   padding: 10px 0;
 `;
-const List = styled.div`
-  flex-direction: flex;
-  text-weight: bold;
-`;
 
 const Number = styled.div`
   font-weight: bold;

@@ -61,7 +61,7 @@ const NavBar = () => {
                 </Icon>
                 <span>Login</span>
               </Navs>
-              <Navs style={navSignUp} to="/signup" activeStyle>
+              <Navs style={navSignUp} to="/signup">
                 <Icon>
                   <SiGnuprivacyguard />
                 </Icon>

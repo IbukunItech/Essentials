@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { DropdownItems } from "./DropdownItems";
 import styled from "styled-components";
 

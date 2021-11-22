@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useSignUp } from "../hooks/useSignUp";
 import { Loaders } from "../hooks/Loaders";
 import { FcGoogle } from "react-icons/fc";
-import { GrFacebookOption } from "react-icons/gr";
 import { AiOutlineUser, AiOutlineMail, AiOutlineLock } from "react-icons/ai";
 import img from "../helpers/placeholder.png";
 import { getStorage, ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";

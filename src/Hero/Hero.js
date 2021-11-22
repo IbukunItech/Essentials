@@ -9,14 +9,7 @@ import tailorsImg from "../Asset/download.jpg";
 import plumbImg from "../Asset/plumb.jpg";
 
 const Hero = () => {
-  const [image, setImage] = useState([
-    carImg,
-    salonImg,
-    tyresImg,
-    vulcaImg,
-    tailorsImg,
-    plumbImg,
-  ]);
+  const [image, setImage] = useState([carImg, salonImg, tyresImg, vulcaImg, tailorsImg, plumbImg]);
   const [index, setIndex] = React.useState(0);
   const delay = 5000;
   const timeoutRef = useRef(null);
@@ -30,10 +23,7 @@ const Hero = () => {
   useEffect(() => {
     resetTimeout();
     timeoutRef.current = setTimeout(
-      () =>
-        setIndex((prevIndex) =>
-          prevIndex === image.length - 1 ? 0 : prevIndex + 1
-        ),
+      () => setIndex((prevIndex) => (prevIndex === image.length - 1 ? 0 : prevIndex + 1)),
       delay
     );
     return () => {};
@@ -43,9 +33,7 @@ const Hero = () => {
     <Container>
       <Wrapper>
         <SlideShow>
-          <SlideShowSlider
-            style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
-          >
+          <SlideShowSlider style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
             {image.map((img, index) => (
               <Slide key={index} src={img} />
             ))}
@@ -53,8 +41,8 @@ const Hero = () => {
         </SlideShow>
         <TextHolder>
           <Text>
-            Whether you are looking to hire a skilled artisan or find your
-            customer,We are at <span>Essentials</span>
+            Whether you are looking to hire a skilled artisan or find your customer,We are at{" "}
+            <span>Essentials</span>
             are ready to make life easy at just one go!
           </Text>
           <Button>Join us!</Button>

@@ -4,7 +4,6 @@ import SignIn from "../component/signIn";
 import SignUp from "../component/signUp";
 import Homepage from "./homepage";
 import NavBar from "./navbar";
-import { AuthProvider } from "../context/AuthProvider";
 import { useAuthContext } from "../hooks/useAuthContext";
 import Main from "../../Mayowa/main";
 import AutoDetails from "../../Mayowa/AutoDetails";
