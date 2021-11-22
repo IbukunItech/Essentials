@@ -73,6 +73,7 @@ function FashionDetails() {
 }
 
 export default FashionDetails;
+
 const CardHolder = styled.div`
   display: flex;
   align-items: center;
@@ -157,6 +158,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+
   min-height: 100vh;
   justify-content: center;
   align-items: center;
@@ -166,5 +168,6 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   min-height: 100vh;
+
   background: whitesmoke;
 `;
