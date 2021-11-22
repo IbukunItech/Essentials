@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useLogin } from "../hooks/useLogin";
 import { Loaders } from "../hooks/Loaders";
-import { AiOutlineUser, AiOutlineMail, AiOutlineLock } from "react-icons/ai";
+import { AiOutlineMail, AiOutlineLock } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const SignIn = () => {

@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { BsInstagram, BsTwitter, BsFacebook, BsWhatsapp } from "react-icons/bs";
 import data from "./event.json";
 import { AiOutlinePhone, AiOutlineStar } from "react-icons/ai";
 import { AiFillStar } from "react-icons/ai";
